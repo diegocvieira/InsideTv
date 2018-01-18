@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'blockUser' => \App\Http\Middleware\BlockUser::class,
+        'naoLogado' => \App\Http\Middleware\NaoLogado::class,
     ];
 }

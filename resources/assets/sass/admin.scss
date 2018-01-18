@@ -1,0 +1,21 @@
+#admin-page{
+    #img-poster-preview, #img-capa-preview{
+        width: 200px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 3px;
+    }
+
+    .poster-capa{
+        float: left;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 992px){
+        .submit{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}

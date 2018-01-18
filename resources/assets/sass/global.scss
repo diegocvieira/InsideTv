@@ -1,0 +1,115 @@
+body, html{
+    background-color: #151d27 !important;
+}
+
+.page-normal{
+    margin-top: 50px;
+    min-height: 100%;
+}
+
+.container-fluid{
+    width: 100%;
+    max-width: initial;
+
+    > .row{
+        margin: 1%;
+
+        > .col{
+            padding: 0;
+        }
+    }
+}
+
+.btn{
+    background-color: transparent;
+    border: 1px solid #09c;
+    color: #fff;
+    font-weight: bold;
+
+    &:hover, &:active, &:focus{
+        background-color: rgba(0,153,204,.9);
+    }
+}
+
+.select-wrapper{
+    li span{
+        color: #000;
+    }
+
+    .active [type="checkbox"]:checked + label:before{
+        border-right-color: rgba(0, 153, 204, .7);
+        border-bottom-color: rgba(0, 153, 204, .7);
+    }
+
+    .caret{
+        color: #787a7d !important;
+    }
+}
+
+//Contador de numero de caracteres do input
+.character-counter{
+    color: #787a7d !important;
+}
+
+input, textarea{
+    color: #fff;
+
+    &:focus{
+        box-shadow: 0 1px 0 0 #03a9f4 !important;
+        border-bottom: 1px solid #03a9f4 !important;
+    }
+}
+
+input.valid:not([type]), input.valid:not([type]):focus, input[type=text].valid:not(.browser-default), input[type=text].valid:not(.browser-default):focus, input[type=password].valid:not(.browser-default), input[type=password].valid:not(.browser-default):focus, input[type=email].valid:not(.browser-default), input[type=email].valid:not(.browser-default):focus, input[type=url].valid:not(.browser-default), input[type=url].valid:not(.browser-default):focus, input[type=time].valid:not(.browser-default), input[type=time].valid:not(.browser-default):focus, input[type=date].valid:not(.browser-default), input[type=date].valid:not(.browser-default):focus, input[type=datetime].valid:not(.browser-default), input[type=datetime].valid:not(.browser-default):focus, input[type=datetime-local].valid:not(.browser-default), input[type=datetime-local].valid:not(.browser-default):focus, input[type=tel].valid:not(.browser-default), input[type=tel].valid:not(.browser-default):focus, input[type=number].valid:not(.browser-default), input[type=number].valid:not(.browser-default):focus, input[type=search].valid:not(.browser-default), input[type=search].valid:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown{
+    border-bottom: 1px solid #787a7d;
+    box-shadow: 0 1px 0 0 #787a7d;
+}
+
+textarea:focus + label, input:focus + label{
+  color: #03a9f4 !important;
+}
+
+//icone input
+.input-field .prefix{
+    color: #787a7d;
+
+    &.active{
+        color: #03a9f4;
+    }
+}
+
+.table{
+    color: #fff;
+
+    tr:nth-child(even){
+        background-color: #263238;
+    }
+}
+
+.error{
+    border-bottom: 1px solid #f44336 !important;
+    box-shadow: 0 1px 0 0 #f44336 !important;
+}
+
+#toast-container{
+    top: auto !important;
+    right: auto !important;
+    bottom: 1%;
+    left: 0.5%;
+}
+
+@import 'inc/top-visitor';
+
+@import 'inc/top-admin';
+
+@import 'index';
+
+@import 'login-cadastro';
+
+@import 'show-serie';
+
+@import 'usuario/listas';
+
+@import 'admin';
+
+@import 'inc/footer';

@@ -1,0 +1,43 @@
+footer{
+    background-color: #010611;
+    border-top: 1px solid black;
+    text-align: center;
+    color: #96a6b7;
+    padding: 10px;
+
+    p{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+#modal-default{
+    border-radius: 5px;
+    width: 500px;
+    transform: translateY(-50%) !important;
+    background-image: url(../images/insidetv-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .modal-footer{
+        background-image: url(../images/insidetv-banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        button:first-child{
+            margin-right: 2%;
+        }
+    }
+
+    .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 520px){
+    #modal-default{
+        width: 95%;
+    }
+}

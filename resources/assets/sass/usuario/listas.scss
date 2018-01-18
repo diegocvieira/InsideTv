@@ -1,0 +1,128 @@
+.html_listas, .html_listas body{
+    overflow: hidden;
+}
+
+#listas-page{
+    min-height: 99%;
+    height: 99%;
+    margin: 0;
+
+    #listas{
+        overflow-x: auto;
+        overflow-y: auto;
+        white-space: nowrap;
+        height: 92%;
+        padding: 20px 0;
+        bottom: 0;
+        margin: 0;
+        text-align: center;
+
+        .topo{
+            position: relative;
+
+            input{
+                border: none;
+                margin: 0;
+                padding: 0;
+            }
+
+
+        }
+
+        .options-serie{
+            position: absolute;
+            top: 0;
+            right: 1%;
+            cursor: pointer;
+
+            i{
+                color: grey;
+                font-size: 1.5rem;
+
+                &:hover{
+                    color: #fff;
+                }
+            }
+
+            .sub_options{
+                background-color: #fff;
+                position: absolute;
+                z-index: 999;
+                left: 0;
+                top: 25px;
+                padding: 10px;
+                border-radius: 5px;
+                display: none;
+            }
+        }
+
+        //Nome da serie
+        .serie{
+            background-color: #254658;
+            color: #039be5;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            float: left;
+            width: 100%;
+            list-style: none;
+            text-align: left;
+            position: relative;
+
+            &:first-child{
+                margin-top: 0;
+            }
+
+
+        }
+
+        .lista{
+            display:inline-block;
+            padding: 10px;
+            background-color: #263241;
+            color: #fff;
+            margin-left: 10px;
+            border-radius: 5px;
+            width: 300px;
+            vertical-align: top;
+            text-align: left;
+
+            &:last-child{
+                margin-right: 10px;
+            }
+
+            .drop{
+                width: 100%;
+                float: left;
+                margin: 0;
+                padding: 0;
+                margin-top: 10px;
+            }
+
+            .sem-lista{
+                color: grey;
+                pointer-events: none;
+            }
+        }
+    }
+
+    ::-webkit-scrollbar{
+        width: 15px;
+        height: 15px;
+    }
+
+    ::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment{
+        display: none;
+    }
+
+    ::-webkit-scrollbar-track-piece{
+        background-color: #3b3b3b;
+        -webkit-border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal{
+        background-color: #666;
+        -webkit-border-radius: 6px;
+    }
+}

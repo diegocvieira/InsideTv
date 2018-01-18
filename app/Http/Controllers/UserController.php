@@ -40,7 +40,7 @@ class UserController extends Controller
            $return['url'] = '/';
 
        else{
-           $return['msg'] =  'Informacoes invalidas.';
+           $return['msg'] =  'Informações inválidas';
            $return['status'] = 'erro';
        }
 

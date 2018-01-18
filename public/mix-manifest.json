@@ -1,4 +1,8 @@
 {
     "/js/global.js": "/js/global.js",
-    "/css/global.css": "/css/global.css"
+    "/css/global.css": "/css/global.css",
+    "/js/show-serie.js": "/js/show-serie.js",
+    "/js/listas.js": "/js/listas.js",
+    "/js/ListaController.js": "/js/ListaController.js",
+    "/js/Insidetv.js": "/js/Insidetv.js"
 }

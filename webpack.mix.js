@@ -11,15 +11,12 @@ let mix = require('laravel-mix');
  |
  */
 
- //mix.sass('resources/assets/sass/header.scss', 'public/css')
-    //.sass('resources/assets/sass/index.scss', 'public/css');
-
  mix.copyDirectory('resources/assets/images', 'public/images');
 
-//mix.styles([
-    //'public/css/header.css',
-    //'public/css/global.css'
-//], 'public/css/global.css');
 mix.sass('resources/assets/sass/global.scss', 'public/css');
 
 mix.js('resources/assets/js/global.js', 'public/js')
+    .js('resources/assets/js/show-serie', 'public/js')
+    .js('resources/assets/js/listas', 'public/js')
+    .js('resources/assets/js/Insidetv', 'public/js')
+    .js('resources/assets/js/ListaController', 'public/js');

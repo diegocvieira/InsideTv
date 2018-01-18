@@ -24,7 +24,7 @@
                 <ul class="right hide-on-med-and-down menu">
                      <li><a href="{{ route('serie.index') }}"><i class="left material-icons">theaters</i>Séries</a></li>
                      <li><a href="#"><i class="left material-icons">forum</i>Fórum</a></li>
-                     <li style="border-left: 2px solid #1c2936;"><a href="{{ route('login-cadastro') }}"><i class="left material-icons">exit_to_app</i>Login / Cadastro</a></li>
+                     <li style="border-left: 2px solid #1c2936;"><a href="{{ route('login') }}"><i class="left material-icons">exit_to_app</i>Login / Cadastro</a></li>
                  </ul>
             </div>
          </nav>
@@ -46,43 +46,6 @@
         <li><a href="/"><i class="left material-icons">home</i>Home</a></li>
         <li><a href="{{ route('serie.index') }}"><i class="left material-icons">theaters</i>Séries</a></li>
         <li><a href="#"><i class="left material-icons">forum</i>Fórum</a></li>
-        <li style="border-left: 2px solid #1c2936;"><a href="{{ route('login-cadastro') }}"><i class="left material-icons">exit_to_app</i>Login / Cadastro</a></li>
+        <li style="border-left: 2px solid #1c2936;"><a href="{{ route('login') }}"><i class="left material-icons">exit_to_app</i>Login / Cadastro</a></li>
     </ul>
 </header>
-
-<script>
-    $(document).ready(function(){
-        $("#header-visitor .button-collapse").sideNav();
-        $('#header-visitor select').material_select();
-    });
-
-    $(document).on('click', '#header-visitor form button', function(){
-        if($('.palavra-chave').val() == '')
-            return false;
-
-        else
-            return true;
-    });
-
-    $(document).on('change', '.search-filter', function(){
-        var value = $(this).val();
-        var tag = $('#header-visitor .palavra-chave label');
-
-        switch(value){
-            case 'usuarios':
-                tag.html('Busque por usuários');
-                break;
-
-            case 'series':
-                tag.html('Busque por séries');
-                break;
-
-            case 'forum':
-                tag.html('Busque por tópicos no forum');
-                break;
-
-            case 'all':
-                tag.html('Busque por Séries, usuários e tópicos');
-        }
-    });
-</script>

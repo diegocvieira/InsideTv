@@ -104,7 +104,15 @@
             $('.menu a').removeClass('selected');
             $(this).addClass('selected');
 
-            $('.show-hide').slideToggle();
+            if($(this).attr('data-id') == 'login'){
+                $('#form-login').show();
+                $('#form-cadastro').hide();
+            }
+
+            else{
+                $('#form-login').hide();
+                $('#form-cadastro').show();
+            }
         });
 
         $("#form-login").validate({
