@@ -1,9 +1,9 @@
 //Add CSRF token on all ajax requisitions
-$.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
+//$.ajaxSetup({
+    //headers: {
+        //'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+//    }
+//});
 
 $(document).ready(function(){
     $(".button-collapse").sideNav();//Ativar menu responsivo do topo

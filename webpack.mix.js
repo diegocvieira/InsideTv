@@ -18,5 +18,6 @@ mix.sass('resources/assets/sass/global.scss', 'public/css');
 mix.js('resources/assets/js/global.js', 'public/js')
     .js('resources/assets/js/show-serie', 'public/js')
     .js('resources/assets/js/listas', 'public/js')
-    .js('resources/assets/js/Insidetv', 'public/js')
-    .js('resources/assets/js/ListaController', 'public/js');
+    .js('resources/assets/js/angular/InsidetvConfig', 'public/js/angular')
+    .js('resources/assets/js/angular/InsidetvModule', 'public/js/angular')
+    .js('resources/assets/js/angular/ListaController', 'public/js/angular');

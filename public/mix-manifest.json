@@ -3,6 +3,7 @@
     "/css/global.css": "/css/global.css",
     "/js/show-serie.js": "/js/show-serie.js",
     "/js/listas.js": "/js/listas.js",
-    "/js/ListaController.js": "/js/ListaController.js",
-    "/js/Insidetv.js": "/js/Insidetv.js"
+    "/js/angular/ListaController.js": "/js/angular/ListaController.js",
+    "/js/angular/InsidetvModule.js": "/js/angular/InsidetvModule.js",
+    "/js/angular/InsidetvConfig.js": "/js/angular/InsidetvConfig.js"
 }

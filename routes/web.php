@@ -33,7 +33,7 @@ Route::group(['middleware' => ['auth']], function(){
     Route::post('lista/store', 'ListaController@store');
     Route::get('usuario/listas', 'ListaController@listar');
 
-    Route::get('ajax/listas/adicionar', 'ListaController@teste');
+    Route::post('ajax/listas/adicionar', 'ListaController@teste');
     Route::get('ajax/listas/remover_serie', 'ListaController@removerSerie');
     Route::get('ajax/listas/remover_lista', 'ListaController@removerLista');
     Route::get('ajax/listas/nome_lista', 'ListaController@nomeLista');

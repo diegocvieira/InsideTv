@@ -131,3 +131,82 @@ $(document).ready(function(){
     });
 });
 */
+Vue.component('btn',{
+  template: `<i @click="$emit('trigger')" class="large material-icons">more_horiz</i>`,
+});
+
+Vue.component('template-options-lista', {
+  template: `
+    <div>
+      <ul v-if="showModal" class="sub_options">
+          <li><a href="#" v-on:click="$parent.nameFocus" class="edit-nome-lista">Alterar nome da lista</a></li>
+          <li><a href="#" class="add-serie">Adicionar uma nova série</a></li>
+          <li><a href="#" class="remove-lista">Remover lista</a></li>
+      </ul>
+
+      <btn @trigger="showModal = true">Show Modal</btn>
+    </div>
+  `,
+  data() {
+    return { showModal: false}
+  }
+});
+
+new Vue({
+    el: '#listas-page',
+    data: {
+      showModal: false
+    },
+    mounted() {
+        //Detecta se o scroll esta ativado para alterar a div do appendTo
+        var size_scroll = document.getElementById('listas');
+        var check_scroll = size_scroll.scrollWidth > size_scroll.clientWidth;
+        var scroll = check_scroll == true ? '#listas' : '.lista';
+
+        $('.drop').sortable({
+            connectWith: "ul",
+            revert: true,
+            appendTo: scroll,
+            helper: 'clone',
+            stop: this.dragStop
+        });
+    },
+
+    methods: {
+        dragStop: function(event, ui) {
+            //Remove texto de sem lista se arrastar uma serie para a lista
+            if($(ui.item).prev('.sem-lista').length > 0) {
+                $(ui.item).prev('.sem-lista').remove();
+            }
+
+            this.addMessage();
+        },
+
+        addMessage: function() {
+            $(".drop").each(function(){
+                if($(this).find('li').length == 0 && $(this).find('.sem-lista').length == 0) {
+                    $(this).append("<span class='sem-lista'>Arraste alguma série para aqui</span>");
+                }
+            });
+        },
+
+        editName(event) {
+            event.target.blur();
+
+            var descricao = event.target.value;
+            var lista_id = $(event.target).closest('.lista').data('id');
+
+            this.$http.get('/ajax/listas/nome_lista', {params: { lista_id : lista_id, descricao : descricao }}).then(function(response) {
+            }, function (error) {
+            });
+        },
+
+        onShowModal() {
+            this.showModal = true;
+        },
+
+        nameFocus(event) {
+            $(event.target).parent().parent().parent().prev().prev().focus();
+        }
+    },
+})
